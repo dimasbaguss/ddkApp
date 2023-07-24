@@ -232,11 +232,13 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                             15.0, 0.0, 15.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(0.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/369/600',
+                          child: Image.asset(
+                            dataResult.sensors?.sensorApi?.value ?? false
+                                ? 'assets/images/ada_api.gif'
+                                : 'assets/images/no_api.gif',
                             width: MediaQuery.of(context).size.width * 1.0,
                             height: MediaQuery.of(context).size.height * 0.3,
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fill,
                           ),
                         ),
                       ),
@@ -284,13 +286,15 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .copyWith(
-                                              color: (dataResult.sensors
-                                                          ?.sensorApi?.value ??
-                                                      false)
-                                                  ? Colors.white
-                                                  : FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                            ),
+                                                color: (dataResult
+                                                            .sensors
+                                                            ?.sensorApi
+                                                            ?.value ??
+                                                        false)
+                                                    ? Colors.white
+                                                    : FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryText),
                                       ),
                                     ),
                                   ],
