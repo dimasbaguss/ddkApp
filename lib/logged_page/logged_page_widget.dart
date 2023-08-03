@@ -12,6 +12,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:ddk_app/services/firebaseservices.dart';
 import 'package:ddk_app/models/model_sensor.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'logged_page_model.dart';
 export 'logged_page_model.dart';
 
@@ -323,28 +325,6 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                                     ),
                                   ],
                                 ),
-                                // Column(
-                                //   mainAxisSize: MainAxisSize.max,
-                                //   crossAxisAlignment: CrossAxisAlignment.stretch,
-                                //   children: [
-                                //     Text(
-                                //       '${dataResult.sensors?.sensorApi?.kondisi ?? "-status-"}',
-                                //       textAlign: TextAlign.center,
-                                //       style: FlutterFlowTheme.of(context)
-                                //           .bodyMedium
-                                //           .override(
-                                //             fontFamily: 'Readex Pro',
-                                //             color: (dataResult.sensors?.sensorApi
-                                //                         ?.value ??
-                                //                     false)
-                                //                 ? Colors.white
-                                //                 : FlutterFlowTheme.of(context)
-                                //                     .primaryText,
-                                //             fontWeight: FontWeight.w500,
-                                //           ),
-                                //     ),
-                                //   ],
-                                // ),
                               ],
                             ),
                           ),
