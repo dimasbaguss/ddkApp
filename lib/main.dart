@@ -16,9 +16,15 @@ import 'flutter_flow/internationalization.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 import 'api/firebase_api.dart';
+import 'package:pusher_beams/pusher_beams.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  const instanceID = '782baeab-3199-497a-8655-25c8ead1a917';
+  await PusherBeams.instance.start(instanceID);
+  await PusherBeams.instance.setDeviceInterests(["hello"]);
+
   usePathUrlStrategy();
   await initFirebase();
   await FirebaseApi().initNotifications();
