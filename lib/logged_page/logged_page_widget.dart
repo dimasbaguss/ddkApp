@@ -356,7 +356,7 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                                 color: dataResult.sensors?.sensorGas?.value !=
                                             null &&
                                         dataResult.sensors!.sensorGas!.value! >=
-                                            400
+                                            300
                                     ? Colors.yellow[700]
                                     : FlutterFlowTheme.of(context)
                                         .secondaryBackground,
@@ -393,7 +393,7 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                                                                   .sensors!
                                                                   .sensorGas!
                                                                   .value! >=
-                                                              400
+                                                              300
                                                       ? Colors.white
                                                       : FlutterFlowTheme.of(
                                                               context)
@@ -424,7 +424,7 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                                                                 .sensors!
                                                                 .sensorGas!
                                                                 .value! >=
-                                                            400
+                                                            300
                                                     ? Colors.white
                                                     : FlutterFlowTheme.of(
                                                             context)
@@ -455,7 +455,7 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                                                                 .sensors!
                                                                 .sensorGas!
                                                                 .value! >=
-                                                            400
+                                                            300
                                                     ? Colors.white
                                                     : FlutterFlowTheme.of(
                                                             context)
