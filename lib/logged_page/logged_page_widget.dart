@@ -95,11 +95,11 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                         width: MediaQuery.of(context).size.width * 1.0,
                         height: MediaQuery.of(context).size.height * 0.085,
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          // color: Colors.black,
                           image: DecorationImage(
                             fit: BoxFit.cover,
                             image: Image.asset(
-                              'assets/images/fire.png',
+                              'assets/images/Frame-72-short.png',
                             ).image,
                           ),
                         ),
@@ -111,7 +111,7 @@ class _LoggedPageWidgetState extends State<LoggedPageWidget> {
                               height:
                                   MediaQuery.of(context).size.height * 0.085,
                               decoration: BoxDecoration(
-                                color: Color(0x990F1113),
+                                color: Color.fromARGB(116, 15, 17, 19),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,

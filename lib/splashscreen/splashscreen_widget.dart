@@ -26,7 +26,7 @@ class _SplashscreenWidgetState extends State<SplashscreenWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await Future.delayed(const Duration(milliseconds: 2500));
+      await Future.delayed(const Duration(milliseconds: 2800));
 
       context.pushNamed('LoginPage');
     });
@@ -48,43 +48,42 @@ class _SplashscreenWidgetState extends State<SplashscreenWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: SingleChildScrollView(
-          child: SafeArea(
-            top: false,
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width * 1.0,
-                  height: MediaQuery.of(context).size.height * 1.0,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/Frame_1.png',
-                      ).image,
-                    ),
-                  ),
-                  child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 60.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/Frame_4.png',
-                          width: MediaQuery.of(context).size.width * 0.85,
-                          height: 200.0,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: Image.asset(
+                      'assets/images/firegif.gif',
+                    ).image,
                   ),
                 ),
-              ],
-            ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(195, 0, 0, 0),
+                ),
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    'assets/images/Frame_4.png',
+                    width: MediaQuery.of(context).size.width * 0.85,
+                    height: 200.0,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

@@ -59,7 +59,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: Image.asset(
-                          'assets/images/fire.png',
+                          'assets/images/firegif.gif',
                         ).image,
                       ),
                     ),
@@ -67,7 +67,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       width: MediaQuery.of(context).size.width * 1.0,
                       height: MediaQuery.of(context).size.height * 1.0,
                       decoration: BoxDecoration(
-                        color: Color(0x990F1113),
+                        color: Color.fromARGB(195, 0, 0, 0),
                       ),
                     ),
                   ),
